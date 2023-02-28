@@ -13,8 +13,7 @@ function App() {
         <img src="images/logo.svg" alt="logo" aria-hidden="true" />
       </header>
       <main>
-        <h1>Spending - Last 7 days</h1>
-        <ExpensesChart data={data} />
+        <ExpensesChart data={data} caption="Spending - Last 7 days" />
         <hr />
         <div className="summary">
           <div className="total-spending">

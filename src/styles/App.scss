@@ -65,55 +65,59 @@ main {
   flex-direction: column;
   row-gap: 1.25em;
   margin-top: 1em;
-  h1 {
-    font-size: 1.35em;
-  }
   .expenses-chart {
-    padding-top: 1.1em;
-    height: 10.5em;
-    display: flex;
-    column-gap: 0.75em;
-    .expenses-bar {
+    caption {
+      font-size: 1.35em;
+      text-align: left;
+      font-weight: bold;
+    }
+    tbody {
+      padding-top: 2.1em;
+      height: 10.5em;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      flex: 1;
-      .bar-holder {
-        width: 100%;
-        height: 100%;
+      column-gap: 0.75em;
+      .expenses-bar {
         display: flex;
-        align-items: flex-end;
-        .bar {
-          background-color: $softRed;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+        .bar-holder {
           width: 100%;
-          border-radius: 0.2em;
-          position: relative;
-          .amount {
-            padding: 0.3em;
-            background-color: $darkBrown;
-            border-radius: 0.25em;
-            color: $cream;
-            position: absolute;
-            top: -2.1em;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.9em;
-            z-index: 1;
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+          .bar {
+            background-color: $softRed;
+            width: 100%;
+            border-radius: 0.2em;
+            position: relative;
+            .amount {
+              padding: 0.3em;
+              background-color: $darkBrown;
+              border-radius: 0.25em;
+              color: $cream;
+              position: absolute;
+              top: -2.1em;
+              left: 50%;
+              transform: translateX(-50%);
+              font-size: 0.9em;
+              z-index: 1;
+            }
+          }
+          .bar:hover {
+            filter: brightness(125%);
+            cursor: pointer;
+            .amount {
+              filter: brightness(75%);
+            }
           }
         }
-        .bar:hover {
-          filter: brightness(125%);
-          cursor: pointer;
-          .amount {
-            filter: brightness(75%);
-          }
+        .text {
+          margin-top: 0.9em;
+          font-size: 0.7em;
+          color: $mediumBrown;
         }
-      }
-      .text {
-        margin-top: 0.9em;
-        font-size: 0.7em;
-        color: $mediumBrown;
       }
     }
   }
@@ -185,13 +189,15 @@ footer {
   main,
   header {
     width: 25em;
-    padding: 1.5em;
+    padding: 1.6em;
     height: initial;
   }
   main {
     margin-top: 1em;
-    h1 {
-      font-size: 1.5em;
+    .expenses-chart {
+      caption {
+        font-size: 1.5em;
+      }
     }
     .summary {
       .total-spending {

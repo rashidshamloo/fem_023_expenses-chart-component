@@ -18,8 +18,8 @@ function ExpensesBar({ amount, text, height, isCurrentDay }) {
   }
 
   return (
-    <div className="expenses-bar">
-      <div className="bar-holder">
+    <tr className="expenses-bar">
+      <td className="bar-holder" style={{ width: "100%" }}>
         <div
           // on mouseEnter show the amount
           onMouseEnter={showAmount}
@@ -33,13 +33,15 @@ function ExpensesBar({ amount, text, height, isCurrentDay }) {
             backgroundColor: isCurrentDay && cyan,
           }}
         >
-          <p className="amount" style={{ display: display }}>
+          <div className="amount" style={{ display: display }}>
             ${amount}
-          </p>
+          </div>
         </div>
-      </div>
-      <p className="text">{text}</p>
-    </div>
+      </td>
+      <th className="text" scope="row">
+        {text}
+      </th>
+    </tr>
   );
 }
 
