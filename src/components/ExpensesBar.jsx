@@ -19,7 +19,7 @@ function ExpensesBar({ amount, text, height, isCurrentDay }) {
 
   return (
     <tr className="expenses-bar">
-      <td className="bar-holder" style={{ width: "100%" }}>
+      <td className="bar-holder">
         <div
           // on mouseEnter show the amount
           onMouseEnter={showAmount}
