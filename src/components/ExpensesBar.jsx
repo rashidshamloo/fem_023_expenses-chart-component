@@ -2,19 +2,20 @@ import { useState } from "react";
 
 function ExpensesBar({ amount, text, height, isCurrentDay }) {
   // use display state to show/hide the amount
-  const [display, setDisplay] = useState("none");
+  const [opacity, setOpacity] = useState(0);
 
   // color of the current day
   const cyan = "hsl(186, 34%, 60%)";
+  const LightCyan = "hsl(186, 34%, 70%)";
 
   // shows the amount
   function showAmount() {
-    setDisplay("block");
+    setOpacity(1);
   }
 
   //hides the amount
   function hideAmount() {
-    setDisplay("none");
+    setOpacity(0);
   }
 
   return (
@@ -27,13 +28,14 @@ function ExpensesBar({ amount, text, height, isCurrentDay }) {
           onMouseLeave={hideAmount}
           className="bar"
           // set height and
-          // if currentDay property is true, set the background color to cyan
+          // if currentDay property is true, set the background color to
+          // Lightcyan if mouseOver is true (thus opacity is 1) else cyan
           style={{
             height: height + "%",
-            backgroundColor: isCurrentDay && cyan,
+            backgroundColor: isCurrentDay && (opacity ? LightCyan : cyan),
           }}
         >
-          <div className="amount" style={{ display: display }}>
+          <div className="amount" style={{ opacity: opacity }}>
             ${amount}
           </div>
         </div>

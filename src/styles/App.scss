@@ -92,25 +92,23 @@ main {
             width: 100%;
             border-radius: 0.2em;
             position: relative;
+            transition: all 250ms;
             .amount {
-              padding: 0.3em;
+              padding: 0.4em;
               background-color: $darkBrown;
               border-radius: 0.25em;
               color: $cream;
               position: absolute;
-              top: -2.1em;
+              top: -2.3em;
               left: 50%;
               transform: translateX(-50%);
-              font-size: 0.9em;
-              z-index: 1;
+              font-size: 0.8em;
+              transition: all 250ms;
             }
           }
           .bar:hover {
-            filter: brightness(125%);
+            background-color: lighten($softRed, 10%);
             cursor: pointer;
-            .amount {
-              filter: brightness(75%);
-            }
           }
         }
         .text {
