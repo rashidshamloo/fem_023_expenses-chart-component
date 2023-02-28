@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://rashidshamloo.github.io/fem_023_expenses-chart-component",
+  "homepage": "https://rashidshamloo.github.io/fem_023_expenses-chart-component/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
