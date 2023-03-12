@@ -31,7 +31,7 @@ function App() {
         <ul className="footer-icon">
           <li>
             <a
-              href="https://rashidshamloo.github.com"
+              href="https://github.com/rashidshamloo"
               title="GitHub"
               target="_blank"
             >
